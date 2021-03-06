@@ -1,16 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    {{data_dice}}
+    <h2>{{Number(total_dice)}}</h2>
+    <button @click="addDice()">Add Dice</button>
+    <button @click="roolDice()">Rool Dice</button>
+    <button @click="removeDice()">Remove Dice</button>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  data:()=>{
+    return{
+      data_dice:[],
+      total_dice:0
+    }
+  },
+  methods: {
+    addDice(){
+      this.data_dice.push({
+        id:1,
+        nDice:Math.floor(Math.random() * 6 ) + 1
+      })
+      console.log(this.data_dice)
+    },
+    roolDice(){
+      for(let i in this.data_dice){
+        let ranD = Math.floor(Math.random() * 6 ) + 1
+        this.data_dice[i].nDice = ranD
+      }
+      this.total_dice = this.data_dice.reduce((akumulasi,currentval)=>
+        akumulasi + currentval.nDice,0
+      )
+    },
+    removeDice(){
+      this.data_dice.pop()
+    }
+  },
 }
 </script>
 
