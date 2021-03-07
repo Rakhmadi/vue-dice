@@ -6,15 +6,18 @@
       </div>
     <div class="f">
         <div class="x-col">
-          <h2>{{Number(total_dice)}}</h2>
+
         </div>
         <div class="x-col">
            <button @click="addDice()">Add Dice</button>
            <button @click="roolDice()">Rool Dice</button>
            <button @click="removeDice()">Remove Dice</button>
         </div>
-         <div class="x-col">
-         
+         <div class="x-col d">
+           Total angka Dadu : {{Number(total_dice)}}
+           <br>
+           <br>
+           Total Dadu : {{Number(data_dice.length)}}
         </div>
     </div>
   </div>

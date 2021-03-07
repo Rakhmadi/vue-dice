@@ -1,7 +1,22 @@
-html{
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #565d64;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:salmon;
+    
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: 
+}html{
     margin: 0;
     padding: 0;
-    background-color: #f05454;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .c{
     margin-left:10%;
@@ -32,8 +47,13 @@ html{
     color: #30475e;
     outline: none;
 }
-.f button:hover {
-    
+
+.d{
+    color: white;
+    padding-left:30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
 }
 .x-col{
     width: 33.33%;
