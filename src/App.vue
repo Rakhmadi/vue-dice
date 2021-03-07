@@ -1,10 +1,22 @@
 <template>
-  <div>
-    {{data_dice}}
-    <h2>{{Number(total_dice)}}</h2>
-    <button @click="addDice()">Add Dice</button>
-    <button @click="roolDice()">Rool Dice</button>
-    <button @click="removeDice()">Remove Dice</button>
+  <div >
+
+      <div class="c" v-for="x in data_dice" v-bind:key="x">
+        <img class="dice" width="100" height="100" :src="require(`./assets/dice_/Dice_${x.nDice}.svg`)"/>
+      </div>
+    <div class="f">
+        <div class="x-col">
+          <h2>{{Number(total_dice)}}</h2>
+        </div>
+        <div class="x-col">
+           <button @click="addDice()">Add Dice</button>
+           <button @click="roolDice()">Rool Dice</button>
+           <button @click="removeDice()">Remove Dice</button>
+        </div>
+         <div class="x-col">
+         
+        </div>
+    </div>
   </div>
 </template>
 
@@ -19,7 +31,6 @@ export default {
   methods: {
     addDice(){
       this.data_dice.push({
-        id:1,
         nDice:Math.floor(Math.random() * 6 ) + 1
       })
       console.log(this.data_dice)
@@ -41,12 +52,4 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

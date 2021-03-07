@@ -1,0 +1,50 @@
+html{
+    margin: 0;
+    padding: 0;
+    background-color: #f05454;
+}
+.c{
+    margin-left:10%;
+    margin-right:10%
+}
+.dice{
+    margin: 10px;
+    float: left;
+    animation: dice_fade 1s;
+}
+.f{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    background-color: #30475e;
+    left:0;
+    padding: 5px;
+}
+.f button {
+    width: 100%;
+    float: left;
+    margin: 4px;
+    padding: 5px;
+    border: rgb(252, 112, 96) 2px solid;
+    background-color: salmon;
+    font-size: 16px;
+    color: #30475e;
+    outline: none;
+}
+.f button:hover {
+    
+}
+.x-col{
+    width: 33.33%;
+    float: left;
+}
+
+@keyframes dice_fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
